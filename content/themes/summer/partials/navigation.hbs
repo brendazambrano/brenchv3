@@ -1,0 +1,20 @@
+<div class="summer-blog-menu">
+    <div class="summer-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    {{!-- see navigation.hbs file --}}
+    <ul class="summer-menu">
+        <li class="summer-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+        {{#foreach navigation}}
+            <li>
+                <a href="{{url absolute="true"}}" class="{{#if current}}active{{/if}}">{{label}}</a>
+            </li>
+        {{/foreach}}
+        <li>
+            <a href="#" class="js-open-search search-menu-btn"><i class="fa fa-fw fa-search"></i></a>
+        </li>
+    </ul>
+</div>
+<div class="clearfix"></div>
